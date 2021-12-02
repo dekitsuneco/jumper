@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url('../images/bgi.jpg');
+    background-size: cover;
+}
+/* Container is needed to correctly position the game area */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+#game-area {
+    width: 450px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: rgba(165, 187, 191, 0.6);
+}
+
+#score-tab {
+    position: relative;
+    top: 10px;
+    left: 390px;
+    width: 50px;
+    height: 30px;
+    border: 0.5px black solid;
+    text-align: center;
+    background-color: rgb(165, 187, 191);
+}
+
+#score-tab span {
+    font-size: 25px;
+    font-family: monospace;
+}
+
+/** Main character: */
+#character {
+    position: relative;
+    top: 79px;
+    width: 65px;
+    height: 100px;
+    background-image: url('https://gamepress.gg/arknights/sites/arknights/files/2021-05/imageedit_5_2556908104.png');
+    background-size: cover;
+    background-clip: content-box;
+    border-radius: 2px;
+}
+
+.animate {
+    animation: jump 500ms;
+}
+
+@keyframes jump {
+    0%{top: 79px;}
+    30%{top: 0px;}
+    70%{top: 0px;}
+    100%{top: 79px;}
+}
+
+/** Enemy */
+#slug {
+    position: relative;
+    top: 32px;
+    left: 480px;
+    width: 40px;
+    height: 40px;
+    background-image: url('https://gamepress.gg/arknights/sites/arknights/files/Sprite/relic_61.png');
+    background-size: cover;
+    background-clip: content-box;
+    animation: slug 1s infinite linear;
+}
+
+@keyframes slug {
+    0%{left: 480px;}
+    100%{left: -30px;}
+}
